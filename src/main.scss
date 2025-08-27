@@ -1,0 +1,472 @@
+$df-color-dark: #181818;
+$df-color-accent: #fc3f37;
+$df-color-white: #fbfbfb;
+$df-color-muted: #cccccc;
+$df-color-black: #000;
+
+$radius-lg: 1.25rem;
+$radius-md: 0.75rem;
+
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 1rem;
+$space-4: 1.5rem;
+$space-5: 2rem;
+
+$nav-height: 64px;
+
+@mixin edge-gradient($color, $base, $opacity: 0.15, $spread: 30%) {
+  background-color: $base;
+  background-image: linear-gradient(
+      to right,
+      rgba($color, $opacity),
+      rgba($base, 0) $spread
+    ),
+    linear-gradient(to left, rgba($color, $opacity), rgba($base, 0) $spread);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@mixin media-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: $df-color-white;
+  background-color: $df-color-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background: $df-color-accent;
+  color: $df-color-white;
+  padding: $space-2 $space-3;
+  text-decoration: none;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.text--xl {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.text--md {
+  font-size: 36px;
+  font-weight: 500;
+}
+.text--base {
+  font-size: 1rem;
+  color: $df-color-white;
+}
+
+.text--accent {
+  color: $df-color-accent;
+}
+.text--footer{
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.section--bg-primary {
+  background: $df-color-dark;
+}
+.section--bg-secondary {
+  @include edge-gradient($df-color-accent, $df-color-dark, 0.18, 25%);
+}
+
+.btn-outline-light-thin {
+  --bs-btn-color: #{$df-color-white};
+  --bs-btn-border-color: rgba(255, 255, 255, 0.7);
+  --bs-btn-hover-bg: #{$df-color-accent};
+  --bs-btn-hover-border-color: #{$df-color-accent};
+  --bs-btn-hover-color: #{$df-color-white};
+  border-width: 1px;
+  border-radius: $radius-md;
+}
+
+#site-header__nav {
+  transition: background-color .3s ease, backdrop-filter .3s ease;
+  z-index: 1030;
+
+  &.is-opaque {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: saturate(140%) blur(6px);
+  }
+}
+
+.site-header {
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    color: $df-color-white;
+    font-size: 32px;
+  }
+
+  &__brand img {
+    max-height: 34px;
+    margin-left: 130px;
+  }
+
+  &__cta-link {
+    color: $df-color-white;
+    text-decoration: none;
+    line-height: 1;
+  }
+  &__cta-underline {
+    display: block;
+    border-bottom: 2px solid $df-color-white;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .nav-link {
+    color: $df-color-white;
+    &:hover {
+      color: $df-color-accent;
+    }
+  }
+}
+.site-modal {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background-color: rgba(24, 24, 24, 1);
+  z-index: 1020; 
+  display: none;
+  overflow-y: auto;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    top: 0;
+    padding-top: 120px;
+    height: 100vh;
+
+  }
+
+  &__list{
+    list-style: none;
+      margin-bottom: 32px;
+
+      &__links{
+      text-decoration: none;
+      font-size: 48px;
+      color: $df-color-white;
+      border-bottom: 1px solid $df-color-white;
+      padding: 16px 8px 0;
+      transition: ease-in-out .3s;
+      cursor: pointer;
+      &:hover{
+        color: $df-color-accent;
+        border-bottom: 1px solid $df-color-accent;
+      }
+    }
+  }
+}
+
+.hero {
+  padding-top: calc($nav-height + $space-5);
+  padding-bottom: $space-5;
+
+  &__subtitle {
+    color: $df-color-white;
+    opacity: 0.9;
+  }
+
+  &__image {
+    max-width: 520px;
+    &--desktop {
+      position: relative;
+      margin-inline: auto;
+    }
+  }
+}
+
+.partners {
+  padding-block: $space-3;
+  background: black;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    padding: $space-3;
+    &--divider {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      @include media-md {
+        border-bottom: 0;
+        border-right: 2px solid $df-color-dark;
+      }
+    }
+    img {
+      margin-inline: auto;
+      max-height: 28px;
+      opacity: 0.9;
+    }
+  }
+}
+
+.services {
+  &__card {
+    position: relative;
+    background: transparent;
+    padding: $space-4;
+    min-height: 220px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: $df-color-accent;
+  }
+  &__arrow {
+    position: absolute;
+    top: $space-3;
+    right: $space-3;
+    width: 32px;
+    height: 32px;
+    opacity: 0.85;
+  }
+  &__title {
+    margin-top: $space-3;
+    margin-bottom: $space-2;
+  }
+  &__text {
+    color: $df-color-white;
+    opacity: 0.9;
+  }
+}
+
+.why {
+  &__item {
+    color: $df-color-white;
+  }
+  &__number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: $df-color-accent;
+  }
+  &__label {
+    opacity: 0.9;
+  }
+}
+
+.featured {
+  &__list {
+    padding: 0;
+  }
+  &__item {
+    padding: $space-3 0;
+    cursor: pointer;
+
+    &--active .featured__title {
+      color: $df-color-accent;
+    }
+    &--active .featured__line {
+      border-color: $df-color-white;
+      opacity: 1;
+      width: 50%;
+    }
+  }
+  &__title {
+    display: block;
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  &__subtitle {
+    display: block;
+    color: $df-color-muted;
+    font-size: 24px;
+  }
+  &__line {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.4;
+    width: 50%;
+    transition: opacity .3s ease, border-color .3s ease;
+  }
+
+  &__image img {
+    border-radius: $radius-lg;
+  }
+}
+
+.cta {
+  &__box {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+.customer {
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+.footer {
+  &__brand img {
+    max-height: 32px;
+  }
+  &__social{
+    color: $df-color-accent;
+  }
+
+  &__heading {
+    font-weight: 00;
+    margin-bottom: $space-3;
+    color: $df-color-accent;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  &__link {
+    color: $df-color-white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    opacity: 0.9;
+    transition: ease-in-out .3s;
+    &:hover {
+      color: $df-color-accent;
+      opacity: 1;
+    }
+  }
+
+  &__list--address {
+    opacity: 0.9;
+  }
+
+  &__input {
+    background: transparent;
+    color: #fbfbfb9f;
+    border-color: $df-color-accent;
+    border-radius: 0;
+    font-size: 14px;
+    max-width: 226px;
+    padding: 16px 8px;
+    &::placeholder {
+      color: $df-color-white
+    }
+    &:focus{
+      background-color: transparent;
+      color: $df-color-white;
+    }
+
+  }
+  &__btn {
+    background: $df-color-accent;
+    border: none;
+    color: $df-color-white;
+    font-size: 14px;
+    transition: ease-in-out .3s;
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  &__divider {
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.05)
+    );
+  }
+
+  &__bar {
+    font-size: 13px;
+  }
+
+  &__backToTop{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background-color: $df-color-accent;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: $df-color-white;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.footer__newsletter .form-control.is-invalid {
+  box-shadow: 0 0 0 0.2rem rgba($df-color-accent, .25);
+  border-color: $df-color-accent;
+}
+
+.not-italic {
+  font-style: normal;
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Felipe Espinoza" />
+    <meta name="description" content="DigiForge builds sustainable software solutions for startups and enterprises." />
+    <title>DigiForge — Software Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <body>
+    <header class="site-header" >
+      <nav class="navbar navbar-expand-lg site-header__nav fixed-top" aria-label="Primary" id="site-header__nav">
+        <div class="container-lg">
+        <button type="button" class="site-header__toggle" id="site-header__toggle">
+          <i class="bi bi-list"></i>
+        </button>
+
+          <a href="#" class="navbar-brand site-header__brand mx-lg-auto" aria-label="DigiForge home">
+            <img src="./src/assets/images/logo/logo-digi-forge.svg" alt="DigiForge" />
+          </a>
+
+          <div class="d-none d-lg-flex flex-column align-items-end site-header__cta">
+            <a href="#contact" class="site-header__cta-link">Get an Estimate</a>
+            <span class="site-header__cta-underline"></span>
+          </div>
+        </div>
+      </nav>
+
+      <modal class="section--bg-secondary site-modal" id="site-modal">
+        <div class="container">
+          <ul class="text-center">
+            <li class="site-modal__list">
+              <a href="#" class="site-modal__list__links">
+                About Us
+              </a>
+            </li>
+            <li class="site-modal__list">
+              <a href="#" class="site-modal__list__links">
+                Services
+              </a>
+            </li>
+            <li class="site-modal__list">
+              <a href="#" class="site-modal__list__links">
+                Our Work
+              </a>
+            </li>
+            <li class="site-modal__list">
+              <a href="#" class="site-modal__list__links">
+                Careers
+              </a>
+            </li>
+            <li class="site-modal__list">
+              <a href="#" class="site-modal__list__links">
+                Blogs
+              </a>
+            </li>
+          </ul>
+        </div>
+      </modal>
+    </header>
+
+    <main id="main-content">
+      <section id="hero" class="hero section section--bg-secondary position-relative overflow-hidden">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-7">
+              <div class="hero__content text-white">
+                <p class="text--md mb-1">INNOVATING SUSTAINABLE</p>
+                <h1 class="text--xl m-0">SOFTWARE SOLUTIONS</h1>
+                <p class="text--md mb-3">FOR ENTERPRISES!</p>
+
+                <p class="hero__subtitle text--base mb-4">
+                  We welcome Startups, Growth Companies, and Enterprises to connect with us and bring their ideas to life.
+                </p>
+
+                <a href="#contact" class="btn btn-outline-light-thin btn-lg px-4">
+                  Let’s Innovate <span class="ms-2" aria-hidden="true">→</span>
+                </a>
+
+                <img
+                  src="./src/assets/images/hero-section/heroImage.svg"
+                  alt="Illustration representing digital product development"
+                  class="hero__image mt-4 d-lg-none"
+                />
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5 d-none d-lg-block">
+              <img
+                src="./src/assets/images/hero-section/heroImage.svg"
+                alt="Illustration representing digital product development"
+                class="hero__image hero__image--desktop"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners" aria-labelledby="partners-title">
+        <h2 id="partners-title" class="visually-hidden">Partners</h2>
+        <div class="container">
+          <ul class="partners__list row g-0 align-items-center text-center">
+            <li class="col-6 col-md partners__item partners__item--divider">
+              <img src="./src/assets/images/brands/fiverr-2 1.svg" alt="Fiverr" />
+            </li>
+            <li class="col-6 col-md partners__item partners__item--divider">
+              <img src="./src/assets/images/brands/intuit-logo 1.svg" alt="Intuit" class="img-fluid" />
+            </li>
+            <li class="col-6 col-md partners__item partners__item--divider">
+              <img src="./src/assets/images/brands/sony-logo 1.svg" alt="Sony" class="img-fluid" />
+            </li>
+            <li class="col-6 col-md partners__item partners__item--divider">
+              <img src="./src/assets/images/brands/motul-logo-1 1.svg" alt="Motul" class="img-fluid" />
+            </li>
+            <li class="col-12 col-md partners__item">
+              <img src="./src/assets/images/brands/clickup-logo.svg" alt="ClickUp" class="img-fluid" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="services" class="services section section--bg-primary text-white py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="text--xl">Our <span class="text--accent">Services</span></h2>
+            <p class="text--base">We offer full‑stack development for digital innovation</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="services__card">
+                <i class="bi bi-grid services__icon" aria-hidden="true"></i>
+                <img src="./src/assets/images/services-section/arrow-right-up.svg" alt="" class="services__arrow" />
+                <h3 class="services__title h4 fw-bold">UI/UX Design</h3>
+                <p class="services__text text--base m-0">
+                  Design experiences, not just interfaces. Our UI/UX service brings your digital products to life.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="services__card">
+                <i class="bi bi-phone services__icon" aria-hidden="true"></i>
+                <img src="./src/assets/images/services-section/arrow-right-up.svg" alt="" class="services__arrow" />
+                <h3 class="services__title h4 fw-bold">iOS & Android</h3>
+                <p class="services__text text--base m-0">
+                  We build comprehensive Android and iOS apps that meet complex business needs.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="services__card">
+                <i class="bi bi-megaphone services__icon" aria-hidden="true"></i>
+                <img src="./src/assets/images/services-section/arrow-right-up.svg" alt="" class="services__arrow" />
+                <h3 class="services__title h4 fw-bold">Digital Marketing</h3>
+                <p class="services__text text--base m-0">
+                  Transform your brand with app development, enterprise CMS, and emerging tech solutions.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="services__card">
+                <i class="bi bi-search services__icon" aria-hidden="true"></i>
+                <img src="./src/assets/images/services-section/arrow-right-up.svg" alt="" class="services__arrow" />
+                <h3 class="services__title h4 fw-bold">SEO</h3>
+                <p class="services__text text--base m-0">
+                  Excellent SEO services using proven strategies to rank your business higher on search engines.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="services__card">
+                <i class="bi bi-bar-chart services__icon" aria-hidden="true"></i>
+                <img src="./src/assets/images/services-section/arrow-right-up.svg" alt="" class="services__arrow" />
+                <h3 class="services__title h4 fw-bold">Enterprise Solutions</h3>
+                <p class="services__text text--base m-0">
+                  We turn strategies into software systems that optimize business performance.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="services__card">
+                <i class="bi bi-gear services__icon" aria-hidden="true"></i>
+                <img src="./src/assets/images/services-section/arrow-right-up.svg" alt="" class="services__arrow" />
+                <h3 class="services__title h4 fw-bold">Maintenance</h3>
+                <p class="services__text text--base m-0">
+                  Ongoing support beyond project completion to keep growing together.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="why section bg-black text-white py-5">
+        <div class="container">
+          <div class="row align-items-center g-3">
+            <div class="col-12 col-lg-5">
+              <h2 class="text--xl m-0">Why <span class="text--accent">Us?</span></h2>
+              <p class="text--base mt-3 mb-0">
+                DigiForge is a software development company specialized in high‑quality development services.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <div class="row gy-4">
+                <div class="col-12 col-sm-6">
+                  <div class="why__item d-flex align-items-baseline gap-2">
+                    <span class="why__number">384+</span>
+                    <span class="why__label">Projects Delivered</span>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="why__item d-flex align-items-baseline gap-2">
+                    <span class="why__number">30+</span>
+                    <span class="why__label">Developers</span>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="why__item d-flex align-items-baseline gap-2">
+                    <span class="why__number">8839+</span>
+                    <span class="why__label">Hours Worked</span>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="why__item d-flex align-items-baseline gap-2">
+                    <span class="why__number">15+</span>
+                    <span class="why__label">Global Footprints</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="featured section section--bg-primary text-white py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="text--xl">Featured <span class="text--accent">Work</span></h2>
+            <p class="text--base mt-2">
+              Our team collaborates to craft tangible solutions.
+            </p>
+          </div>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-12 col-lg-4">
+              <ul class="featured__list list-unstyled">
+                <li class="featured__item featured__item--active">
+                  <span class="featured__title">Upguard Investar</span>
+                  <span class="featured__subtitle">Case Study</span>
+                  <hr class="featured__line featured__line--active" />
+                </li>
+                <li class="featured__item">
+                  <span class="featured__title">Inga Motors</span>
+                  <span class="featured__subtitle">Case Study</span>
+                  <hr class="featured__line" />
+                </li>
+                <li class="featured__item">
+                  <span class="featured__title">Onboarding with Sigma</span>
+                  <span class="featured__subtitle">Case Study</span>
+                  <hr class="featured__line" />
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-lg-8">
+              <figure class="featured__image">
+                <img
+                  src="./src/assets/images/feature-section/featured-image.svg"
+                  alt="Featured Work — Upguard Investar"
+                  class="img-fluid rounded"
+                />
+                <figcaption class="visually-hidden">Preview of a featured project</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="cta section section--bg-primary py-5">
+        <div class="container">
+          <div class="cta__box bg-black text-white rounded-4 p-4">
+            <div class="row align-items-center g-4">
+              <div class="col-12 col-lg">
+                <h3 class="m-0 text--xl">Ready to <span class="text--accent">Innovate</span></h3>
+                <p class="text--base mt-3 mb-0">
+                  Contact us to schedule an in‑depth discussion and find out how we can fulfil your technical needs.
+                </p>
+              </div>
+
+              <div class="col-12 col-lg-auto text-lg-end">
+                <a href="#hero" class="btn btn-outline-light-thin btn-lg px-4">
+                  Let’s Connect <span class="ms-2" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="customer" class="customer section section--bg-primary py-5 text-white">
+        <div class="container text-center">
+          <h2 class="text--xl mb-2">Our <span class="text--accent">Customer</span></h2>
+          <p class="text--base mb-4">See what our customers say about us.</p>
+
+          <div class="d-flex justify-content-center gap-3 mb-4">
+            <span class="customer__badge bg-black text--base">
+              <i class="bi bi-circle-fill" aria-hidden="true"></i> Satisfied customers
+            </span>
+            <span class="customer__badge bg-black text--base">
+              <i class="bi bi-circle-fill text--accent" aria-hidden="true"></i> Customers reviews
+            </span>
+          </div>
+
+          <div class="customer__map">
+            <img
+              src="./src/assets/images/customer-section/map.svg"
+              alt="World map with customer review highlights"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section pt-5 text-white bg-black" role="contentinfo">
+      <div class="container pb-4">
+        <div class="row gap-1 align-items-start">
+          <div class="col-12 col-lg-4">
+            <a href="/index.html" class="footer__brand d-inline-block mb-3" aria-label="DigiForge home">
+              <img src="./src/assets/images/logo/logo-digi-forge.svg" alt="DigiForge" />
+            </a>
+
+            <p class="text--footer mb-4">
+              We believe in growing together by empowering businesses through technology and thoughtful software development.
+            </p>
+
+            <form class="footer__newsletter d-flex" aria-labelledby="newsletter-title">
+              <input
+                id="newsletter-email"
+                name="email"
+                type="email"
+                class="form-control footer__input"
+                placeholder="Enter your email"
+              
+                inputmode="email"
+              />
+              <button type="submit" class="footer__btn">Join Newsletter</button>
+              <div id="newsletterError" class="invalid-feedback mt-2">
+              Please enter a valid email.
+            </div>
+            </form>
+
+            <ul class=" list-unstyled d-flex gap-3 mt-4 mb-0">
+              <li><a class="footer__social" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+              <li><a class="footer__social" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+              <li><a class="footer__social" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="d-none d-lg-flex col-lg-1 justify-content-center">
+            <span class="footer__divider" aria-hidden="true"></span>
+          </div>
+
+          <nav class="col-6 col-md-6 col-lg-2" aria-label="Footer — Links">
+            <h6 class="footer__heading">Links</h6>
+            <ul class="footer__list list-unstyled">
+              <li><a class="footer__link" href="#hero">Home</a></li>
+              <li><a class="footer__link" href="#services">Technologies</a></li>
+              <li><a class="footer__link" href="#featured">Case Studies</a></li>
+              <li><a class="footer__link" href="#customer">Clients</a></li>
+              <li><a class="footer__link" href="#">Portfolio</a></li>
+            </ul>
+          </nav>
+
+          <nav class="col-6 col-md-6 col-lg-1" aria-label="Footer — Services">
+            <h6 class="footer__heading">Services</h6>
+            <ul class="footer__list list-unstyled">
+              <li><a class="footer__link" href="#services">UI/UX</a></li>
+              <li><a class="footer__link" href="#services">Web Development</a></li>
+              <li><a class="footer__link" href="#services">Mobile Application</a></li>
+              <li><a class="footer__link" href="#services">Digital Marketing</a></li>
+              <li><a class="footer__link" href="#services">SEO</a></li>
+            </ul>
+          </nav>
+
+          <div class="d-none d-lg-flex col-lg-1 justify-content-center">
+            <span class="footer__divider" aria-hidden="true"></span>
+          </div>
+
+          <address class="col-12 col-lg-2 text-center not-italic">
+            <h6 class="footer__heading">Address</h6>
+            <ul class="footer__list footer__list--address text--footer list-unstyled mb-0">
+              <li>
+                <a class="footer__link  fw-bold" href="mailto:info@digiforge.com">info@digiforge.com</a>
+              </li>
+              <li class="mt-2">
+                1560 Pedrick Rd, Tallahassee,<br />Florida<br />+92 42 322 96908
+              </li>
+              <li class="mt-3">
+                Milwaukee,<br />FL <strong>West Virginia</strong><br />10500 W Silver Spring Dr<br /> (414) 466-7800
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+
+  
+        <a href="#main-content" class="footer__backToTop d-flex justify-content-center align-items-center">
+          <i class="bi bi-arrow-up"></i>
+        </a>
+
+
+      <div class="footer__bar section--bg-primary">
+        <div class="container text-center">
+          <small class="d-block py-3">© 2023 — DigiForge. All Rights Reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
